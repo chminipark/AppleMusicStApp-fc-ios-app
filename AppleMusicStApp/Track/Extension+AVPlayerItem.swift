@@ -10,7 +10,10 @@ import AVFoundation
 import UIKit
 
 extension AVPlayerItem {
+    // extension에서는 stored property 불가
+    // track struct로 변경하는 메소드
     func convertToTrack() -> Track? {
+        // mp3안 정보를 뽑아내기
         let metadatList = asset.metadata
         
         var trackTitle: String?
@@ -77,6 +80,7 @@ extension AVMetadataItem {
 }
 
 extension AVPlayer {
+    //재생 중인지 아닌지
     var isPlaying: Bool {
         guard self.currentItem != nil else { return false }
         return self.rate != 0

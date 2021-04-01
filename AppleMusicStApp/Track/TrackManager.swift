@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-
+ 
 class TrackManager {
     // TODO: 프로퍼티 정의하기 - 트랙들, 앨범들, 오늘의 곡
     var tracks: [AVPlayerItem] = []
