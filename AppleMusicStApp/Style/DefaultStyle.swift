@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// 다크모드 셋팅
 public enum DefaultStyle {
     public enum Colors {
         public static let tint: UIColor = {
