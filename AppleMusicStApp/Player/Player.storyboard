@@ -38,6 +38,11 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-cP-jwL">
                                 <rect key="frame" x="18" y="675" width="378" height="31"/>
+                                <connections>
+                                    <action selector="beginDrag:" destination="mND-BP-7fP" eventType="editingDidBegin" id="RUd-t9-DEr"/>
+                                    <action selector="endDrag:" destination="mND-BP-7fP" eventType="editingDidEnd" id="efE-mq-ng0"/>
+                                    <action selector="seek:" destination="mND-BP-7fP" eventType="valueChanged" id="iml-2m-wYN"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0h-is-fma">
                                 <rect key="frame" x="179.5" y="750" width="55" height="55"/>
@@ -48,6 +53,9 @@
                                 <state key="normal" image="play.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="mND-BP-7fP" eventType="touchUpInside" id="6Cm-c6-KvQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mN8-jt-YJ5">
                                 <rect key="frame" x="20" y="715" width="41" height="18"/>
